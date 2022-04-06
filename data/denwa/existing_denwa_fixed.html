@@ -1,0 +1,35 @@
+
+<form action="denwa_fix.py" id="exisiting1" method="GET">
+<table border="1" class="sampleTable">
+<td width = "400">
+<input cols="10" rows="1" value="%s" name="sug_id" readonly>
+
+ <table border="1">
+    <tr>
+      <th>提案者</th>
+      <th>日付</th>
+      <th>したい度</th>
+    </tr>
+    <tr>
+      <td><textarea cols="10" rows="1" type="text" name="user" readonly>%s</textarea></td>
+      <td><textarea cols="10" rows="1" type="text" name="hiduke" readonly>%s</textarea></td>
+      <td><textarea cols="10" rows="1" type="text" name="will" readonly>%s</textarea></td>
+    </tr>
+    </table>
+  
+
+
+<p>話題<br>
+<textarea cols="30" rows="4" type="text" name="wadai" readonly>%s</textarea>
+</p>
+<p>
+提案時間<br>
+<textarea cols="30"  type="text" name="jikan" readonly>%s</textarea>
+</p>
+<font size="4">%sから%sで決定済み</font><br>
+<input type="checkbox" name="refixer"><font size="2">時間を未決定に戻す</font><br>
+<input type="checkbox" name="deleter"><font size="2">削除する</font>
+<p><input type="submit" value="更新"/></p>
+</td>
+</table>
+</form>

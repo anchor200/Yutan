@@ -1,0 +1,13 @@
+#text:not(:focus){
+  all: inherit;
+  display: inline;
+}
+label{
+  appearance: button;
+}
+#text:focus+label{
+  display: none;
+}
+#text:not(:focus)~#regist{
+  display: none;
+}

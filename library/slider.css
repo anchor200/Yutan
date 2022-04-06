@@ -1,0 +1,62 @@
+.container{
+  position:relative;
+  margin:0 auto;
+  height:40vw;
+  display:flex;
+  justify-content:center;
+}
+ 
+.main-slider{
+  position:relative;
+  width:74vw;
+  height:100%;
+  overflow:hidden;
+}
+ 
+.thumbnail-slider{
+  position:relative;
+  width:26vw;
+  height:100%;
+  line-height:0;
+  overflow-y:auto; /* 垂直方向のスクロールを許可 */
+}
+ 
+.thumbnail-slider .slide{
+  position:relative;
+  height:20%;  /* 5枚まで一度に表示 */
+  overflow:hidden;
+}
+ 
+.slide{
+  figure{
+    height:100%;
+    img{
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+ 
+/* アクティブなスライド */
+.main-slider .slide:target{
+  z-index:3; /* 最前面にする */
+}
+ 
+/* アニメーションで画像を表示 */
+.main-slider .slide:target figure img{
+  animation: show 2.2s ease forwards;
+}
+
+
+.image-vw{
+   width : 55vw;
+}
+
+.nav-vw{
+   width : 15vw;
+}
+
+ul {
+   list-style-type: none;
+}
+

@@ -1,0 +1,66 @@
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="../../library/index.css">
+  <link rel="stylesheet" href="../../library/inPlace.css">
+  <script src="../../library/marked.min.js"></script>
+</head>
+<body>
+<header>
+<script>md(`
+
+# ようこそ
+<table border="1">
+  <tr><!-- 行1（見出し）-->
+  <td width="100" style="text-align: center"><a href="../../index.html">TOP</a></td>
+    <td width="100" style="text-align: center"><a href="../chogen.html">緒言</a></td>
+    <td width="100" style="text-align: center"><a href="../rule.html">ルール</a></td>
+    <td width="100" style="text-align: center"><a href="../message.html">メッセージ</a></td>
+    <td width="100" style="text-align: center">電話予定</td>
+    <td width="100" style="text-align: center"><a href="../nikki.html">TODO&日記</a></td>
+    <td width="100" style="text-align: center"><a href="../takara.html">宝探し</a></td>
+  </tr>
+</table>
+
+`)</script>
+</header>
+<script>md(`
+### 電話予定の調整
+`)</script>
+
+
+<script>md(`
+#### 既存の日程調整
+`)</script>
+%s
+
+<script>md(`
+#### 新しい日程調整の追加
+`)</script>
+<table border="1">
+<td>
+<form method="GET" action="denwa.py">
+<p>ユーザー：<select name="user" required>
+</p>
+<option value=""></option>
+<option value="shogo">shogo</option>
+<option value="yuka">yuka</option>
+</select>
+<p>話題（#を使って箇条書きに）<br>
+<textarea cols="30" rows="8" type="text" name="wadai" required></textarea>
+</p>
+<p>時間の希望<br>
+<input type="date" name="hiduke"><br>
+<textarea type="text" name="jikan" required></textarea>
+</p>
+<p>電話したい度<br>
+<font size=2>電話できればしたい<input type="radio" name="will" value="1" required>
+<input type="radio" name="will" value="2" required>
+<input type="radio" name="will" value="3" required>
+<input type="radio" name="will" value="4" required>
+<input type="radio" name="will" value="5" required>電話しないと死ぬ<br></font>
+</p>
+<input type="submit" value="日程調整を追加する"/>
+</td>
+</table>
+</body>
